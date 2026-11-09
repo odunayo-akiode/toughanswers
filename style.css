@@ -286,13 +286,19 @@ nav a.active {
     background: #f2f2f2;
 }
 
+
 .featured-image {
-    background:
-        linear-gradient(135deg, #20252a, #59636e);
+    background-image: url("Images/featured.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
     display: flex;
     align-items: end;
     padding: 35px;
+    min-height: 350px;
 }
+
 
 .image-label {
     color: white;
@@ -619,13 +625,22 @@ footer {
         grid-template-columns: 1fr;
     }
 
-    .featured-image {
-        min-height: 300px;
-    }
+    
+.featured-image {
+    background:
+        linear-gradient(rgba(20, 30, 45, 0.15), rgba(20, 30, 45, 0.25)),
+        url("Images/featured.jpg");
 
-    .featured-text {
-        padding: 35px;
-    }
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: end;
+    padding: 35px;
+    min-height: 350px;
+}
+
 
     .featured-text h3 {
         font-size: 30px;
@@ -1085,6 +1100,9 @@ footer {
     scroll-margin-top: 130px;
     padding-top: 130px;
     margin-top: -130px;
+    scroll-margin-top: 130px;
+    }
+
 /* Fix spacing in Ask section */
 
 .ask-content p {
@@ -1097,6 +1115,7 @@ footer {
     margin-top: 35px;
     position: relative;
     z-index: 2;
+    }
 /* Ensure full Ask-section description is visible */
 
 .ask-content p {
