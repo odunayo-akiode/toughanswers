@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TOUGHanswers | Ask the Tough Questions</title>
+
+    <meta name="description"
+          content="TOUGHanswers explores life's difficult questions and provides thoughtful, practical answers.">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- TOP BAR -->
+    <div class="top-bar">
+        <p>Ask the tough questions. Find better answers.</p>
+
+        <div class="top-links">
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
+
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <a href="#" class="logo">
+            <strong>TOUGH</strong><span>answers</span>
+        </a>
+
+        <button class="menu-button" onclick="toggleMenu()" aria-label="Open menu">
+            ☰
+        </button>
+
+        <nav id="navigation">
+
+            <a href="#" class="active">Home</a>
+            <a href="#">Life</a>
+            <a href="#">Career</a>
+            <a href="#">Business</a>
+            <a href="#">Technology</a>
+            <a href="#">Faith</a>
+            <a href="#">Opinion</a>
+
+        </nav>
+
+        <button class="search-button" onclick="openSearch()">
+            🔍
+        </button>
+
+    </header>
+
+
+    <!-- SEARCH -->
+    <div id="searchBox" class="search-box">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="What question are you looking for?"
+        >
+
+        <button onclick="searchSite()">Search</button>
+
+    </div>
+
+<!-- SEARCH RESULTS -->
+<div id="searchResults" class="search-results"></div>
+    
+<!-- HERO -->
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <div class="hero-label">
+                    THINK DEEPER
+                </div>
+
+                <h1>
+                    Tough questions.<br>
+                    <span>Better answers.</span>
+                </h1>
+
+                <p>
+                    We explore the questions that matter —
+                    about life, career, relationships, faith,
+                    technology, business and personal growth.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#latest" class="button primary">
+                        Explore Answers
+                    </a>
+
+                    <a href="#ask" class="button secondary">
+                        Ask a Question
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="hero-visual">
+
+                <div class="question-mark">?</div>
+
+                <div class="floating-card card-one">
+                    <span>QUESTION</span>
+                    What really makes a successful life?
+                </div>
+
+                <div class="floating-card card-two">
+                    <span>ANSWER</span>
+                    Let's find out.
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FEATURED -->
+        <section class="featured section">
+
+            <div class="section-title">
+
+                <div>
+                    <span>FEATURED</span>
+                    <h2>A question worth asking</h2>
+                </div>
+
+                <a href="#">View all →</a>
+
+            </div>
+
+
+            <article class="featured-card">
+
+                <div class="featured-image">
+
+                    <div class="image-label">
+                        FEATURED ANSWER
+                    </div>
+
+                </div>
+
+                <div class="featured-text">
+
+                    <span class="category">
+                        PERSONAL DEVELOPMENT
+                    </span>
+
+                    <h3>
+                        Why do some people struggle to discover
+                        their purpose in life?
+                    </h3>
+
+                    <p>
+                        Purpose is one of life's biggest questions.
+                        Discover practical ways to examine your
+                        abilities, experiences, values and direction.
+                    </p>
+
+                    <a href="#" class="article-link">
+                        Read the answer →
+                    </a>
+
+                </div>
+
+            </article>
+
+        </section>
+
+
+        <!-- LATEST -->
+        <section class="section latest" id="latest">
+
+            <div class="section-title">
+
+                <div>
+                    <span>LATEST ANSWERS</span>
+                    <h2>What are you thinking about?</h2>
+                </div>
+
+                <a href="#">See all →</a>
+
+            </div>
+
+
+            <div class="article-grid">
+
+                <article class="article-card">
+
+                    <div class="article-image career">
+
+    <img
+        src="images/career.jpg"
+        alt="Career and professional development">
+
+    <span>CAREER</span>
+
+</div>
+
+                    <div class="article-body">
+
+                        <span class="category">CAREER</span>
+
+                        <h3>
+                            Is it too late to change your career?
+                        </h3>
+
+                        <p>
+                            Changing direction can be difficult,
+                            but starting again may be exactly what
+                            you need.
+                        </p>
+
+                        <a <a href="article-career.html">Read more →</a>
+
+                    </div>
+
+                </article>
+
+
+                <article class="article-card">
+
+                    <div class="article-image relationship">
+
+    <img
+        src="images/relationships.jpg"
+        alt="Relationships and connection">
+
+    <span>RELATIONSHIPS</span>
+
+</div>
+
+                    <div class="article-body">
+
+                        <span class="category">RELATIONSHIPS</span>
+
+                        <h3>
+                            What makes a relationship truly successful?
+                        </h3>
+
+                        <p>
+                            Healthy relationships require more
+                            than attraction and emotion.
+                        </p>
+
+                        <a href="article-relationships.html">Read more →</a>
+
+                    </div>
+
+                </article>
+
+
+                <article class="article-card">
+
+                    <div class="article-image technology">
+
+    <img
+        src="images/technology.jpg"
+        alt="Technology and digital innovation">
+
+    <span>TECHNOLOGY</span>
+
+</div>
+
+                    <div class="article-body">
+
+                        <span class="category">TECHNOLOGY</span>
+
+                        <h3>
+                            Is technology making our lives better?
+                        </h3>
+
+                        <p>
+                            Technology has transformed our lives,
+                            but should everything be digital?
+                        </p>
+
+                        <a href="article-technology.html">Read more →</a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- TOPICS -->
+        <section class="topics section">
+
+            <div class="section-title">
+
+                <div>
+                    <span>EXPLORE</span>
+                    <h2>Find your topic</h2>
+                </div>
+
+            </div>
+
+
+            <div class="topic-grid">
+
+                <a href="#">
+                    <strong>01</strong>
+                    Life
+                    <span>→</span>
+                </a>
+
+                <a href="#">
+                    <strong>02</strong>
+                    Career
+                    <span>→</span>
+                </a>
+
+                <a href="#">
+                    <strong>03</strong>
+                    Business
+                    <span>→</span>
+                </a>
+
+                <a href="#">
+                    <strong>04</strong>
+                    Technology
+                    <span>→</span>
+                </a>
+
+                <a href="#">
+                    <strong>05</strong>
+                    Faith
+                    <span>→</span>
+                </a>
+
+                <a href="#">
+                    <strong>06</strong>
+                    Education
+                    <span>→</span>
+                </a>
+
+                <a href="#">
+                    <strong>07</strong>
+                    Relationships
+                    <span>→</span>
+                </a>
+
+                <a href="#">
+                    <strong>08</strong>
+                    Personal Growth
+                    <span>→</span>
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ASK -->
+        <section class="ask-section" id="ask">
+
+    <div class="ask-content">
+
+        <span>HAVE A TOUGH QUESTION?</span>
+
+        <h2>
+            Don't just wonder.<br>
+            <strong>Ask.</strong>
+        </h2>
+
+        
+        <a href="#questionForm" class="ask-button">
+    Ask TOUGHanswers →
+</a>
+
+    </div>
+
+    <div class="big-question">
+        ?
+    </div>
+
+</section> 
+<div class="big-question">
+    ?
+</div>
+
+</section>
+
+
+<!-- QUESTION FORM -->
+
+<section
+    class="question-form-section"
+    id="questionForm">
+
+    <div class="question-form-container">
+
+        <div class="form-heading">
+
+            <span>SUBMIT YOUR QUESTION</span>
+
+            <h2>
+                What's the tough question
+                on your mind?
+            </h2>
+
+        </div>
+
+
+        <form
+            id="toughQuestionForm"
+            action="https://formspree.io/f/mnpqaazp"
+            method="POST"
+            onsubmit="submitQuestion(event)">
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label for="name">
+                        Your name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter your name"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="you@example.com"
+                        required>
+
+                </div>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="questionCategory">
+                    Category
+                </label>
+
+                <select
+                    id="questionCategory"
+                    name="category"
+                    required>
+
+                    <option value="">
+                        Select a category
+                    </option>
+
+                    <option value="Life">Life</option>
+                    <option value="Career">Career</option>
+                    <option value="Business">Business</option>
+                    <option value="Technology">Technology</option>
+                    <option value="Faith">Faith</option>
+                    <option value="Relationships">Relationships</option>
+                    <option value="Education">Education</option>
+                    <option value="Personal Growth">Personal Growth</option>
+
+                </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="question">
+                    Your question
+                </label>
+
+                <textarea
+                    id="question"
+                    name="question"
+                    rows="7"
+                    placeholder="Write your tough question here..."
+                    required></textarea>
+
+            </div>
+
+
+            <div class="form-checkbox">
+
+                <input
+                    type="checkbox"
+                    id="permission"
+                    name="permission"
+                    value="Yes"
+                    required>
+
+                <label for="permission">
+
+                    I understand that my question may be
+                    edited for clarity and could be published
+                    on TOUGHanswers.
+
+                </label>
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="submit-question">
+
+                Submit Question →
+
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+<!-- QUESTION FORM -->
+
+     </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer-main">
+
+            <div>
+
+                <a href="#" class="footer-logo">
+                    <strong>TOUGH</strong>answers
+                </a>
+
+                <p>
+                    Ask the tough questions.<br>
+                    Find better answers.
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>Explore</h4>
+
+                <a href="#">Life</a>
+                <a href="#">Career</a>
+                <a href="#">Business</a>
+                <a href="#">Technology</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>Connect</h4>
+
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+                <a href="#">Advertise</a>
+                <a href="#">Submit a Question</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>© 2026 TOUGHanswers. All rights reserved.</p>
+
+            <div>
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
