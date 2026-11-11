@@ -1,0 +1,318 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact Us | TOUGHanswers</title>
+
+    <meta name="description"
+          content="Contact TOUGHanswers with your questions, suggestions and enquiries. Connect with us through our contact form or WhatsApp.">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- TOP BAR -->
+
+    <div class="top-bar">
+
+        <p>Ask the tough questions. Find better answers.</p>
+
+        <div class="top-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+        </div>
+
+    </div>
+
+
+    <!-- HEADER -->
+
+    <header class="header">
+
+        <a href="index.html" class="logo">
+            <strong>TOUGH</strong><span>answers</span>
+        </a>
+
+        <button
+            class="menu-button"
+            onclick="toggleMenu()"
+            aria-controls="navigation"
+            aria-expanded="false">
+            ☰
+        </button>
+
+        <nav id="navigation">
+
+            <a href="index.html">Home</a>
+            <a href="article-life.html">Life</a>
+            <a href="article-career.html">Career</a>
+            <a href="article-business.html">Business</a>
+            <a href="article-technology.html">Technology</a>
+            <a href="article-faith.html">Faith</a>
+            <a href="article-opinion.html">Opinion</a>
+            <a href="article-education.html">Education</a>
+            <a href="article-relationships.html">Relationships</a>
+            <a href="article-personal-growth.html">Personal Growth</a>
+
+        </nav>
+
+        <button
+            class="search-button"
+            onclick="openSearch()"
+            aria-controls="searchBox"
+            aria-expanded="false">
+            🔍
+        </button>
+
+    </header>
+
+
+    <!-- SEARCH -->
+
+    <div id="searchBox" class="search-box">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="What question are you looking for?">
+
+        <button onclick="searchSite()">Search</button>
+
+    </div>
+
+    <div id="searchResults" class="search-results"></div>
+
+
+    <!-- CONTACT CONTENT -->
+
+    <main class="article-page">
+
+        <div class="article-header">
+
+            <span class="category">GET IN TOUCH</span>
+
+            <h1>Contact TOUGHanswers</h1>
+
+            <p class="article-intro">
+                Have a question, suggestion, comment or enquiry?
+                We would love to hear from you. Reach out and
+                let's keep the conversation going.
+            </p>
+
+        </div>
+
+
+        <article class="article-content-full">
+
+            <h2>Send Us a Message</h2>
+
+            <p>
+                Use the form below to send us a message.
+                You can contact us about our articles, suggest
+                topics, ask questions or share your feedback.
+            </p>
+
+
+            <!-- CONTACT FORM -->
+
+            <form
+                class="contact-form"
+                action="https://formspree.io/f/mnpqaazp"
+                method="POST">
+
+                <input
+                    type="hidden"
+                    name="_subject"
+                    value="New Contact Message - TOUGHanswers">
+
+                <label for="contactName">Your Name</label>
+
+                <input
+                    type="text"
+                    id="contactName"
+                    name="name"
+                    placeholder="Enter your name"
+                    required>
+
+
+                <label for="contactEmail">Email Address</label>
+
+                <input
+                    type="email"
+                    id="contactEmail"
+                    name="email"
+                    placeholder="Enter your email address"
+                    required>
+
+
+                <label for="contactSubject">Subject</label>
+
+                <input
+                    type="text"
+                    id="contactSubject"
+                    name="subject"
+                    placeholder="What is your message about?"
+                    required>
+
+
+                <label for="contactMessage">Your Message</label>
+
+                <textarea
+                    id="contactMessage"
+                    name="message"
+                    rows="7"
+                    placeholder="Write your message here..."
+                    required></textarea>
+
+
+                <button type="submit" class="contact-submit">
+                    Send Message
+                </button>
+
+            </form>
+
+
+            <h2>Connect with Us</h2>
+
+            <p>
+                You can also reach us directly through WhatsApp
+                or follow our channel for updates and discussions.
+            </p>
+
+        </article>
+
+
+        <!-- WHATSAPP SECTION -->
+
+        <section class="whatsapp-contact">
+
+            <h2>Connect with TOUGHanswers</h2>
+
+            <p>
+                Have something to share? We are just a message away.
+                You can also join our channel to follow updates.
+            </p>
+
+            <div class="whatsapp-buttons">
+
+                <a
+                    href="https://wa.me/2250500247687"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="whatsapp-chat">
+
+                    Chat with Us on WhatsApp
+
+                </a>
+
+                <a
+                    href="https://whatsapp.com/channel/0029VaB7wg342DcdypAxrl0e"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="whatsapp-channel">
+
+                    Join Our WhatsApp Channel
+
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-main">
+
+            <div>
+
+                <a href="index.html" class="footer-logo">
+                    <strong>TOUGH</strong>answers
+                </a>
+
+                <p>
+                    Ask the tough questions.<br>
+                    Find better answers.
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>Explore</h4>
+
+                <a href="article-life.html">Life</a>
+                <a href="article-career.html">Career</a>
+                <a href="article-business.html">Business</a>
+                <a href="article-technology.html">Technology</a>
+                <a href="article-faith.html">Faith</a>
+                <a href="article-opinion.html">Opinion</a>
+                <a href="article-education.html">Education</a>
+                <a href="article-relationships.html">Relationships</a>
+                <a href="article-personal-growth.html">Personal Growth</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>Connect</h4>
+
+                <a href="about.html">About TOUGHanswers</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="index.html#questionForm">Submit a Question</a>
+                <a href="index.html#questions-answers">Questions & Answers</a>
+
+                <a
+                    href="https://wa.me/2250500247687"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    Chat on WhatsApp
+                </a>
+
+                <a
+                    href="https://whatsapp.com/channel/0029VaB7wg342DcdypAxrl0e"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    WhatsApp Channel
+                </a>
+
+            </div>
+
+        </div>
+
+
+        
+<div class="footer-bottom">
+
+    <p>© 2026 TOUGHanswers. All rights reserved.</p>
+
+    <div>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms & Conditions</a>
+    </div>
+
+</div>
+
+</footer>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+```
