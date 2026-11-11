@@ -400,6 +400,7 @@ function openQuestionForm() {
 // SUBMIT QUESTION THROUGH FORMSPREE
 // ==========================================
 
+
 async function submitQuestion(event) {
 
     event.preventDefault();
@@ -422,6 +423,14 @@ async function submitQuestion(event) {
     submitButton.disabled = true;
     submitButton.textContent = "Sending...";
 
+    // Hide any previous error message
+
+    const previousError = document.getElementById("questionError");
+
+    if (previousError) {
+        previousError.style.display = "none";
+    }
+
     try {
 
         const response = await fetch(form.action, {
@@ -436,23 +445,31 @@ async function submitQuestion(event) {
 
             form.reset();
 
-            alert(
-                "Thank you! Your question has been received. We appreciate your contribution to TOUGHanswers."
-            );
+            form.style.display = "none";
+
+            const successMessage = document.getElementById("questionSuccess");
+
+            if (successMessage) {
+                successMessage.style.display = "block";
+            }
 
         } else {
 
-            alert(
-                "Something went wrong while submitting your question. Please try again."
-            );
+            const errorMessage = document.getElementById("questionError");
+
+            if (errorMessage) {
+                errorMessage.style.display = "block";
+            }
 
         }
 
     } catch (error) {
 
-        alert(
-            "Unable to submit your question. Please check your internet connection and try again."
-        );
+        const errorMessage = document.getElementById("questionError");
+
+        if (errorMessage) {
+            errorMessage.style.display = "block";
+        }
 
     } finally {
 
@@ -460,5 +477,62 @@ async function submitQuestion(event) {
         submitButton.textContent = "Submit Question →";
 
     }
+
+}
+
+
+
+// Search Questions and Answers
+
+function searchQuestions() {
+
+    const searchInput = document.getElementById("qaSearch");
+
+    if (!searchInput) return;
+
+    const searchText = searchInput.value.toLowerCase().trim();
+
+    const questions = document.querySelectorAll(".qa-item");
+
+    let resultsFound = 0;
+
+    questions.forEach(function(question) {
+
+        const questionText = (
+    question.textContent + " " +
+    (question.dataset.keywords || "")
+).toLowerCase();
+
+        const categoryHeading = question.previousElementSibling;
+
+        const matches = questionText.includes(searchText);
+
+        question.style.display = matches ? "block" : "none";
+
+        if (categoryHeading && categoryHeading.tagName === "H2") {
+            categoryHeading.style.display = matches ? "block" : "none";
+        }
+
+        if (matches) {
+            resultsFound++;
+        }
+
+    });
+
+    let noResults = document.getElementById("qaNoResults");
+
+    if (!noResults) {
+
+        noResults = document.createElement("p");
+
+        noResults.id = "qaNoResults";
+
+        noResults.textContent = "Sorry, no matching questions or answers found.";
+
+        searchInput.parentElement.after(noResults);
+
+    }
+
+    noResults.style.display = resultsFound === 0 ? "block" : "none";
 
 }

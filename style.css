@@ -1587,3 +1587,143 @@ footer {
     color: #ffffff;
     transform: translateY(-2px);
 }
+
+
+/* Questions and Answers - Expandable Buttons */
+
+.qa-item {
+    margin: 15px 0 25px;
+    border: 1px solid #dddddd;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.qa-item summary {
+    background: #e87524;
+    color: #ffffff;
+    padding: 18px 22px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    list-style: none;
+    position: relative;
+    padding-right: 50px;
+    transition: background 0.3s ease;
+}
+
+.qa-item summary:hover {
+    background: #c85c12;
+}
+
+.qa-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.qa-item summary::after {
+    content: "+";
+    position: absolute;
+    right: 22px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.qa-item[open] summary::after {
+    content: "−";
+}
+
+.qa-answer {
+    background: #ffffff;
+    padding: 18px 22px;
+    border-top: 1px solid #dddddd;
+    line-height: 1.8;
+}
+
+
+
+/* Questions and Answers Search Box */
+
+.qa-search {
+    position: relative;
+    margin: 25px 0 35px;
+}
+
+.qa-search input {
+    width: 100%;
+    padding: 16px 20px 16px 55px;
+    border: 2px solid #e87524;
+    border-radius: 6px;
+    font-size: 16px;
+    outline: none;
+    background: #ffffff;
+    transition: 0.3s ease;
+}
+
+.qa-search input:focus {
+    border-color: #c85c12;
+    box-shadow: 0 0 5px rgba(232, 117, 36, 0.25);
+}
+
+.qa-search input::placeholder {
+    color: #888888;
+}
+
+.qa-search-icon {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 25px;
+    color: #e87524;
+    pointer-events: none;
+}
+
+
+/* Question Submission Success Message */
+
+.question-success {
+    background: #f0f8f1;
+    border: 2px solid #2e8b57;
+    border-radius: 8px;
+    padding: 30px;
+    margin-top: 25px;
+    text-align: center;
+}
+
+.question-success h3 {
+    color: #237443;
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.question-success p {
+    color: #333333;
+    font-size: 16px;
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* Question Submission Error Message */
+
+.question-error {
+    background: #fff4f4;
+    border: 2px solid #d9534f;
+    border-radius: 8px;
+    padding: 30px;
+    margin-top: 25px;
+    text-align: center;
+}
+
+.question-error h3 {
+    color: #b42318;
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.question-error p {
+    color: #333333;
+    font-size: 16px;
+    line-height: 1.8;
+    margin: 0;
+}
